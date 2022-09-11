@@ -35,7 +35,7 @@ public class UserService {
 		
 		//Long userId=userdata.getDeptId();
 		log.info("InSide UserService-ResponseTemplateVO- Calling service call to Department service to get the department object= " );
-		Department department=restTemplate.getForObject("http://localhost:9001/departments/"+userdata.getDeptId(),Department.class);
+		Department department=restTemplate.getForObject(URL+userdata.getDeptId(),Department.class);
 		vo.setUserInfo(userdata);
 		vo.setDepartment(department);
 		return vo;
